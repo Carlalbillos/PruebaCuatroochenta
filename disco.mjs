@@ -13,11 +13,11 @@ export class Disco {
 
     almacenarDatos(datos) {
         this.contenido = datos;
-        console.log("Guardando " + this.contenido + "...");
+        console.log(`\nGuardando ${this.contenido}...`);
     }
 
     leerDatos() {
-        console.log(`Leyendo datos: ${this.contenido}`);
+        console.log(`\nLeyendo datos: ${this.contenido}`);
     }
 
     mostrarInformacion() {

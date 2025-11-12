@@ -5,7 +5,7 @@ import { DiscoDuro } from './discoDuro.mjs';
 const miCd1 = new Cd("Mi CD", Cd.CAPACIDAD_PREDETERMINADA, "Canciones Pop 2025");
 const miDiscoDuro1 = new DiscoDuro("Mi Disco Duro", "4TB", "Proyectos DAW 2");
 
-console.log("=== CD 1 ===");
+console.log("\n=== CD 1 ===");
 miCd1.girarDisco();
 miCd1.mostrarInformacion();
 miCd1.leerDatos();

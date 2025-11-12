@@ -2,7 +2,7 @@ import { Disco } from './disco.mjs';
 
 export class DiscoDuro extends Disco {
     // CONSTANTES ESPECÍFICAS DE DISCO DURO
-    static CAPACIDAD_PREDETERMINADA = "1TB";
+    static CAPACIDAD_PREDETERMINADA = 10000; // MEGABYTES
     static VELOCIDAD_PREDETERMINADA = 7200; // RPM
 
     constructor(nombre, capacidad = DiscoDuro.CAPACIDAD_PREDETERMINADA, contenido = "") {
@@ -14,7 +14,7 @@ export class DiscoDuro extends Disco {
     }
 
     leerDatos() {
-        console.log(`Leyendo datos del disco duro mediante cabezal magnético: ${this.contenido}`);
+        console.log(`\nLeyendo datos del disco duro mediante cabezal magnético: ${this.contenido}`);
     }
 
     mostrarInformacion() {

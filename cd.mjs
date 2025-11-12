@@ -2,7 +2,7 @@ import { Disco } from './disco.mjs';
 
 export class Cd extends Disco {
     // CONSTANTES ESPECÍFICAS DE CD
-    static CAPACIDAD_PREDETERMINADA = "700MB";
+    static CAPACIDAD_PREDETERMINADA = 700; // MEGABYTES
     static VELOCIDAD_PREDETERMINADA = 1000; // RPM
 
     constructor(nombre, capacidad = Cd.CAPACIDAD_PREDETERMINADA, contenido = "") {
@@ -14,7 +14,7 @@ export class Cd extends Disco {
     }
 
     leerDatos() {
-        console.log(`Leyendo datos del CD mediante láser: ${this.contenido}`);
+        console.log(`\nLeyendo datos del CD mediante láser: ${this.contenido}`);
     }
 
     mostrarInformacion() {
