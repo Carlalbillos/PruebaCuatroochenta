@@ -1,8 +1,10 @@
-export class Disco {
+import { DiscoGiratorio } from './discoGIratorio.mjs';
+
+export class DiscoDatos extends DiscoGiratorio {
     marca = "";
 
-    constructor(nombre, capacidad, contenido) {
-        this.nombre = nombre;
+    constructor(nombre, capacidad, contenido, material) {
+        super(nombre, material);
         this.capacidad = capacidad;
         this.contenido = contenido;
     }
@@ -21,8 +23,8 @@ export class Disco {
     }
 
     mostrarInformacion() {
-        console.log(`Nombre: ${this.nombre}`);
-        console.log(`Capacidad: ${this.capacidad}`);
+        super.mostrarInformacion();
+        console.log(`Capacidad: ${this.capacidad} Megabytes`);
         console.log(`Contenido: ${this.contenido || '(vacío)'}`);
     }
 }

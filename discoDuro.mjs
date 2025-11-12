@@ -1,12 +1,12 @@
-import { Disco } from './disco.mjs';
+import { DiscoDatos } from './discoDatos.mjs';
 
-export class DiscoDuro extends Disco {
+export class DiscoDuro extends DiscoDatos {
     // CONSTANTES ESPECÍFICAS DE DISCO DURO
-    static CAPACIDAD_PREDETERMINADA = 10000; // MEGABYTES
+    static CAPACIDAD_PREDETERMINADA = 1000; // MEGABYTES
     static VELOCIDAD_PREDETERMINADA = 7200; // RPM
 
     constructor(nombre, capacidad = DiscoDuro.CAPACIDAD_PREDETERMINADA, contenido = "") {
-        super(nombre, capacidad, contenido);
+        super(nombre, capacidad, contenido, "Aluminio con recubrimiento magnético");
     }
 
     girarDisco() {

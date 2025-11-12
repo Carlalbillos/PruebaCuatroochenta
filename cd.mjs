@@ -1,12 +1,12 @@
-import { Disco } from './disco.mjs';
+import { DiscoDatos } from './discoDatos.mjs';
 
-export class Cd extends Disco {
+export class Cd extends DiscoDatos {
     // CONSTANTES ESPECÍFICAS DE CD
     static CAPACIDAD_PREDETERMINADA = 700; // MEGABYTES
     static VELOCIDAD_PREDETERMINADA = 1000; // RPM
 
     constructor(nombre, capacidad = Cd.CAPACIDAD_PREDETERMINADA, contenido = "") {
-        super(nombre, capacidad, contenido);
+        super(nombre, capacidad, contenido, "Policarbonato");
     }
 
     girarDisco() {
