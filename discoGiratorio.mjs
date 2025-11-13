@@ -14,7 +14,8 @@ export class DiscoGiratorio {
     }
 
     mostrarInformacion() {
+        console.log(`\n--- Información de ${this.constructor.name} ---`);
         console.log(`Nombre: ${this.nombre}`);
-        console.log(`Material: ${this.material}`);
+        console.log(`Material: ${this.material || "(vacío)"}`);
     }
 }
