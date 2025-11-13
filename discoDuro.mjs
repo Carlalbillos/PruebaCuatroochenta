@@ -1,25 +1,34 @@
-import { DiscoDatos } from './discoDatos.mjs';
+import {DiscoDatos} from './discoDatos.mjs';
 
 export class DiscoDuro extends DiscoDatos {
     // CONSTANTES ESPECÍFICAS DE DISCO DURO
-    static CAPACIDAD_PREDETERMINADA = 1000; // MEGABYTES
+    static CAPACIDAD_PREDETERMINADA = "1TB";
     static VELOCIDAD_PREDETERMINADA = 7200; // RPM
+    static MATERIAL_PREDETERMINADO = "Aluminio con recubrimiento magnético";
+    static ESGRABABLE_PREDETERMINADO = true;
 
-    constructor(nombre, capacidad = DiscoDuro.CAPACIDAD_PREDETERMINADA, contenido = "") {
-        super(nombre, capacidad, contenido, "Aluminio con recubrimiento magnético");
+
+    constructor(
+        nombre,
+        capacidad = DiscoDuro.CAPACIDAD_PREDETERMINADA,
+        contenido = "",
+        material = DiscoDuro.MATERIAL_PREDETERMINADO,
+        marca = "",
+        velocidad = DiscoDuro.VELOCIDAD_PREDETERMINADA,
+        esGrabable = DiscoDuro.ESGRABABLE_PREDETERMINADO,
+    ) {
+        super(nombre, capacidad, contenido, material, marca, velocidad, esGrabable);
     }
 
     girarDisco() {
-        console.log(`Disco duro girando a ${DiscoDuro.VELOCIDAD_PREDETERMINADA} RPM`);
+        console.log(`Disco duro girando a ${this.velocidad} RPM`);
     }
 
     leerDatos() {
-        console.log(`\nLeyendo datos del disco duro mediante cabezal magnético: ${this.contenido}`);
+        console.log(`\nLeyendo datos del disco duro mediante cabezal magnético: ${this.contenido || "(vacío)"}`);
     }
 
     mostrarInformacion() {
-        console.log(`\n--- Información del Disco Duro ---`);
         super.mostrarInformacion();
-        console.log(`Velocidad de giro: ${DiscoDuro.VELOCIDAD_PREDETERMINADA} RPM`);
     }
 }
