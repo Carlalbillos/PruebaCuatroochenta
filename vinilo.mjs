@@ -12,13 +12,14 @@ export class Vinilo extends DiscoDatos {
         contenido = "",
         material = Vinilo.MATERIAL_PREDETERMINADO,
         marca = "",
+        velocidad = Vinilo.VELOCIDAD_PREDETERMINADA,
         esGrabable = Vinilo.ESGRABABLE_PREDETERMINADO,
     ) {
-        super(nombre, capacidad, contenido, material, marca, esGrabable);
+        super(nombre, capacidad, contenido, material, marca, velocidad, esGrabable);
     }
 
     girarDisco() {
-        console.log(`Disco duro girando a ${Vinilo.VELOCIDAD_PREDETERMINADA} RPM`);
+        console.log(`${this.nombre} girando a ${this.velocidad} RPM`);
     }
 
     leerDatos() {

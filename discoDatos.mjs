@@ -1,5 +1,5 @@
 import {DiscoGiratorio} from './discoGiratorio.mjs';
-// ========== CLASE BASE PARA DATOS  ==========
+// ========== CLASE INTERMEDIA PARA DATOS  ==========
 // Representa objeto circular que almacena datos
 export class DiscoDatos extends DiscoGiratorio {
 
