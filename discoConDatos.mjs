@@ -1,7 +1,7 @@
 import {DiscoGiratorio} from './discoGiratorio.mjs';
-// ========== CLASE INTERMEDIA PARA DATOS  ==========
+// ========== CLASE INTERMEDIA PARA DISCOS CON DATOS  ==========
 // Representa objeto circular que almacena datos
-export class DiscoDatos extends DiscoGiratorio {
+export class DiscoConDatos extends DiscoGiratorio {
 
     constructor(nombre,
                 capacidad,
@@ -9,23 +9,23 @@ export class DiscoDatos extends DiscoGiratorio {
                 material = "Desconocido",
                 marca = "",
                 velocidad = 0,
-                esGrabable = false
+                esRegrabable = false
     ) {
         super(nombre, material);
         this.capacidad = capacidad;
         this.contenido = contenido;
         this.marca = marca;
         this.velocidad = velocidad;
-        this.esGrabable = esGrabable;
+        this.esRegrabable = esRegrabable;
     }
 
     girarDisco() {
-        console.log(`${this.nombre} girando...`);
+        console.log(`${this.nombre} girando a ${this.velocidad} RPM`);
     }
 
     almacenarDatos(datos) {
         console.log(`Iniciando la grabación...`);
-        if (this.esGrabable || this.contenido === "") {
+        if (this.esRegrabable || this.contenido === "") {
             this.contenido = datos;
             console.log(`\nGrabación de ${this.contenido} completada.`);
         } else {
@@ -44,6 +44,6 @@ export class DiscoDatos extends DiscoGiratorio {
         if (this.marca) {
             console.log(`Marca: ${this.marca || "(sin marca)"}`);
         }
-        console.log(`Grabable: ${this.esGrabable ? "Sí" : "No"}`);
+        console.log(`Regrabable: ${this.esRegrabable ? "Sí" : "No"}`);
     }
 }

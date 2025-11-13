@@ -1,18 +1,15 @@
-import {DiscoGiratorio} from './discoGiratorio.mjs';
+import {DiscoSinDatos} from "./discoSinDatos.mjs";
 
-export class Frisbee extends DiscoGiratorio {
+export class Frisbee extends DiscoSinDatos {
 
     constructor(nombre, diametro, material = "PVC") {
-        super(nombre, material);
-        this.diametro = diametro;
+        super(nombre, material, diametro);
     }
 
     girarDisco() {
-        console.log(`Disco Giratorio: "${this.nombre}" girando sobre su eje`);
-    }
+        console.log(`Giras el ${this.nombre}... ¡y sale volando!`);    }
 
     mostrarInformacion() {
         super.mostrarInformacion();
-        console.log(`Diámetro: ${this.diametro}`);
     }
 }

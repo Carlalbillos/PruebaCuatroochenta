@@ -1,12 +1,11 @@
-import {DiscoDatos} from './discoDatos.mjs';
+import {DiscoConDatos} from './discoConDatos.mjs';
 
-export class DiscoDuro extends DiscoDatos {
+export class DiscoDuro extends DiscoConDatos {
     // CONSTANTES ESPECÍFICAS DE DISCO DURO
     static CAPACIDAD_PREDETERMINADA = "1TB";
     static VELOCIDAD_PREDETERMINADA = 7200; // RPM
     static MATERIAL_PREDETERMINADO = "Aluminio con recubrimiento magnético";
-    static ESGRABABLE_PREDETERMINADO = true;
-
+    static ESREGRABABLE_PREDETERMINADO = true;
 
     constructor(
         nombre,
@@ -15,13 +14,13 @@ export class DiscoDuro extends DiscoDatos {
         material = DiscoDuro.MATERIAL_PREDETERMINADO,
         marca = "",
         velocidad = DiscoDuro.VELOCIDAD_PREDETERMINADA,
-        esGrabable = DiscoDuro.ESGRABABLE_PREDETERMINADO,
+        esRegrabable = DiscoDuro.ESREGRABABLE_PREDETERMINADO,
     ) {
-        super(nombre, capacidad, contenido, material, marca, velocidad, esGrabable);
+        super(nombre, capacidad, contenido, material, marca, velocidad, esRegrabable);
     }
 
     girarDisco() {
-        console.log(`Disco duro girando a ${this.velocidad} RPM`);
+        super.girarDisco();
     }
 
     leerDatos() {

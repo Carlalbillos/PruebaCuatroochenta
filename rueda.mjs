@@ -1,18 +1,16 @@
-import {DiscoGiratorio} from './discoGiratorio.mjs';
+import {DiscoSinDatos} from './discoSinDatos.mjs';
 
-export class Rueda extends DiscoGiratorio {
+export class Rueda extends DiscoSinDatos {
 
-    constructor(nombre, diametro, material) {
-        super(nombre, material);
-        this.diametro = diametro;
+    constructor(nombre, material, diametro = "Desconocido") {
+        super(nombre, material, diametro);
     }
 
     girarDisco() {
-        console.log(`Disco Giratorio: "${this.nombre}" girando sobre su eje`);
+        super.girarDisco();
     }
 
     mostrarInformacion() {
         super.mostrarInformacion();
-        console.log(`Diámetro: ${this.diametro}`);
     }
 }

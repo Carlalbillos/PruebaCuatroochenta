@@ -1,11 +1,11 @@
-import {DiscoDatos} from './discoDatos.mjs';
+import {DiscoConDatos} from './discoConDatos.mjs';
 
-export class Cd extends DiscoDatos {
+export class Cd extends DiscoConDatos {
     // CONSTANTES ESPECÍFICAS DE CD
     static CAPACIDAD_PREDETERMINADA = "72 minutos";
     static VELOCIDAD_PREDETERMINADA = 1000; // RPM
     static MATERIAL_PREDETERMINADO = "Policarbonato";
-    static ESGRABABLE_PREDETERMINADO = false;
+    static ESREGRABABLE_PREDETERMINADO = false;
 
     constructor(
         nombre,
@@ -14,13 +14,13 @@ export class Cd extends DiscoDatos {
         material = Cd.MATERIAL_PREDETERMINADO,
         marca = "",
         velocidad = Cd.VELOCIDAD_PREDETERMINADA,
-        esGrabable = Cd.ESGRABABLE_PREDETERMINADO
+        esRegrabable = Cd.ESREGRABABLE_PREDETERMINADO
     ) {
-        super(nombre, capacidad, contenido, material, marca, velocidad, esGrabable);
+        super(nombre, capacidad, contenido, material, marca, velocidad, esRegrabable);
     }
 
     girarDisco() {
-        console.log(`CD girando a ${this.velocidad} RPM`);
+        super.girarDisco();
     }
 
     leerDatos() {

@@ -1,10 +1,10 @@
-import {DiscoDatos} from './discoDatos.mjs';
+import {DiscoConDatos} from './discoConDatos.mjs';
 
-export class Vinilo extends DiscoDatos {
+export class Vinilo extends DiscoConDatos {
     // CONSTANTES ESPECÍFICAS DE Vinilo
     static VELOCIDAD_PREDETERMINADA = 33; // RPM
     static MATERIAL_PREDETERMINADO = "PVC"
-    static ESGRABABLE_PREDETERMINADO = false;
+    static ESREGRABABLE_PREDETERMINADO = false;
 
     constructor(
         nombre,
@@ -13,13 +13,13 @@ export class Vinilo extends DiscoDatos {
         material = Vinilo.MATERIAL_PREDETERMINADO,
         marca = "",
         velocidad = Vinilo.VELOCIDAD_PREDETERMINADA,
-        esGrabable = Vinilo.ESGRABABLE_PREDETERMINADO,
+        esRegrabable = Vinilo.ESREGRABABLE_PREDETERMINADO,
     ) {
-        super(nombre, capacidad, contenido, material, marca, velocidad, esGrabable);
+        super(nombre, capacidad, contenido, material, marca, velocidad, esRegrabable);
     }
 
     girarDisco() {
-        console.log(`${this.nombre} girando a ${this.velocidad} RPM`);
+        super.girarDisco();
     }
 
     leerDatos() {

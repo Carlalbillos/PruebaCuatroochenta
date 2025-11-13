@@ -1,11 +1,11 @@
-import {DiscoDatos} from './discoDatos.mjs';
+import {DiscoConDatos} from './discoConDatos.mjs';
 
-export class BlueRay extends DiscoDatos {
+export class BlueRay extends DiscoConDatos {
     // CONSTANTES ESPECÍFICAS DE BlueRay
     static CAPACIDAD_PREDETERMINADA = "25 GB";
     static VELOCIDAD_PREDETERMINADA = 2000; // RPM
     static MATERIAL_PREDETERMINADO = "Policarbonato";
-    static ESGRABABLE_PREDETERMINADO = false;
+    static ESREGRABABLE_PREDETERMINADO = false;
 
     constructor(
         nombre,
@@ -14,13 +14,13 @@ export class BlueRay extends DiscoDatos {
         material = BlueRay.MATERIAL_PREDETERMINADO,
         marca = "",
         velocidad = BlueRay.VELOCIDAD_PREDETERMINADA,
-        esGrabable = BlueRay.ESGRABABLE_PREDETERMINADO
+        esRegrabable = BlueRay.ESREGRABABLE_PREDETERMINADO
     ) {
-        super(nombre, capacidad, contenido, material, marca, velocidad, esGrabable);
+        super(nombre, capacidad, contenido, material, marca, velocidad, esRegrabable);
     }
 
     girarDisco() {
-        console.log(`${this.nombre} girando a ${this.velocidad} RPM`);
+        super.girarDisco();
     }
 
     leerDatos() {

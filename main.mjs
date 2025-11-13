@@ -12,8 +12,6 @@ const miCd1 = new Cd(
     "Canciones Pop 2025",
     undefined,
     "Verbatim",
-    undefined,
-    true
 );
 const miBlueRay1 = new BlueRay(
     "Mi BlueRay 1",
@@ -36,46 +34,46 @@ const miVinilo1 = new Vinilo(
 );
 const miRueda1 = new Rueda(
     "Rueda de bicicleta",
-    "27 pulgadas",
-    "Aluminio y goma"
+    "Aluminio y goma",
+    "27 pulgadas"
 );
 const miFrisbee1 = new Frisbee(
     "Frisbee rojo",
-    "15 centímetros",
-    "PVC"
+    "PVC",
+    "15 centímetros"
 );
 
-//Ejecutamos los comportamientos
-console.log(`\n=== ${miCd1.nombre} ===`);
+// Ejecutamos los comportamientos
+console.log(`\n====== ${miCd1.nombre} ======`);
 miCd1.girarDisco();
 miCd1.mostrarInformacion();
 miCd1.leerDatos();
 miCd1.almacenarDatos("Rock Clásico - Led Zeppelin, Pink Floyd");
 miCd1.leerDatos();
 
-console.log(`\n=== ${miBlueRay1.nombre} ===`);
+console.log(`\n====== ${miBlueRay1.nombre} ======`);
 miBlueRay1.girarDisco();
 miBlueRay1.mostrarInformacion();
 miBlueRay1.leerDatos();
 miBlueRay1.almacenarDatos("Interestellar (2014)");
 miBlueRay1.leerDatos();
 
-console.log(`\n===${miDiscoDuro1.nombre} ===`);
+console.log(`\n======${miDiscoDuro1.nombre} ======`);
 miDiscoDuro1.girarDisco();
 miDiscoDuro1.mostrarInformacion();
 miDiscoDuro1.leerDatos();
 miDiscoDuro1.almacenarDatos("Instalación Windows 11");
 miDiscoDuro1.leerDatos();
 
-console.log(`\n===${miVinilo1.nombre} ===`);
+console.log(`\n======${miVinilo1.nombre} ======`);
 miVinilo1.girarDisco();
 miVinilo1.mostrarInformacion();
 miVinilo1.leerDatos();
 
-console.log(`\n===${miRueda1.nombre} ===`);
+console.log(`\n======${miRueda1.nombre} ======`);
 miRueda1.girarDisco();
 miRueda1.mostrarInformacion();
 
-console.log(`\n===${miFrisbee1.nombre} ===`);
+console.log(`\n======${miFrisbee1.nombre} ======`);
 miFrisbee1.girarDisco();
 miFrisbee1.mostrarInformacion();
