@@ -1,6 +1,5 @@
 import {DiscoGiratorio} from './discoGiratorio.mjs';
 
-// Representa objeto circular que NO almacena datos
 export class Rueda extends DiscoGiratorio {
 
     constructor(nombre, diametro, material) {
